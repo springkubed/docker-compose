@@ -6,8 +6,13 @@ services:
     container_name: config-service
     ports:
       - "8888:8888"
-    image: docker.io/dashaun/io.springkubed.service.config:v0.0.1-aarch_64
+    image: docker.io/dashaun/io.springkubed.service.config:v0.0.6-aarch_64
     restart: always
+  discovery-service:
+    container_name: discovery-service
+    ports:
+      - "8761:8761"
+    image: docker.io/dashaun/io.springkubed.service.discovery:v0.0.4-aarch_64
   prometheus:
     container_name: prometheus
     image: prom/prometheus
