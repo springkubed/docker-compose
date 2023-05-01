@@ -2,6 +2,11 @@ version: '3'
 
 services:
 
+  authorization-service:
+    container_name: authorization-service
+    ports:
+      - "9000:9000"
+    image: docker.io/dashaun/io.springkubed.service.authorization:v0.0.2-aarch_64
   config-service:
     container_name: config-service
     ports:
